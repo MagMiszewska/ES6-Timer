@@ -71,6 +71,29 @@ var Stopwatch = function () {
             this.running = false;
             clearInterval(this.watch);
         }
+    }, {
+        key: 'resetWatch',
+        value: function resetWatch() {
+            this.running = false;
+            clearInterval(this.watch);
+            this.reset();
+            this.print();
+        }
+    }, {
+        key: 'save',
+        value: function save() {
+            var listItem = document.createElement('li');
+            var list = document.querySelector('.results');
+
+            listItem.innerText = this.format(this.times);
+
+            list.appendChild(listItem);
+        }
+    }, {
+        key: 'clear',
+        value: function clear() {
+            document.querySelector('.results').innerHTML = '';
+        }
     }]);
 
     return Stopwatch;
@@ -94,4 +117,19 @@ startButton.addEventListener('click', function () {
 var stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', function () {
     return stopwatch.stop();
+});
+
+var resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', function () {
+    return stopwatch.resetWatch();
+});
+
+var saveButton = document.getElementById('save');
+saveButton.addEventListener('click', function () {
+    return stopwatch.save();
+});
+
+var clearButton = document.getElementById('clear');
+clearButton.addEventListener('click', function () {
+    return stopwatch.clear();
 });
