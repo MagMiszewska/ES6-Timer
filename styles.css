@@ -1,0 +1,36 @@
+.controls {
+	display: flex;
+	justify-content: center;
+}
+
+.button {
+	background-color: #1c1853;
+	padding: 15px;
+	margin: 20px 10px;
+	color: #e0e0e0;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.button:hover {
+	background-color: #3f37b1;
+}
+
+.stopwatch {
+	margin: 30px auto;
+	padding: 20px;	
+	background-color: #621f64;
+	color: #e0e0e0;
+	font-size: 30px;
+	border-radius:10px;
+    text-align: center;
+    width: 120px;
+}
+
+.results {	
+	color: #621f64;
+	font-size: 30px;
+    text-align: center;
+    padding: 0;
+}
