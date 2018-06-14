@@ -53,7 +53,6 @@ class Stopwatch {
     }
 
     resetWatch() {
-        this.running = false;
         this.reset();
         this.print();
     }

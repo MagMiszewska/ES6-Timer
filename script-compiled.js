@@ -74,7 +74,6 @@ var Stopwatch = function () {
     }, {
         key: 'resetWatch',
         value: function resetWatch() {
-            this.running = false;
             this.reset();
             this.print();
         }
